@@ -3,12 +3,15 @@ variable "cidr_block" {
 }
 
 variable "common_tags" {
+    default  = {
+        Name = "roboshop"
+        Environment = "Dev"
+        Terraform = "true"
 
-default  = {
+        }
+}
+variable "vpc_tags" {
+  default = {
     Name = "roboshop"
-    Environment = "Dev"
-    Terraform = "true"
-
-    }
-  
+  }
 }
